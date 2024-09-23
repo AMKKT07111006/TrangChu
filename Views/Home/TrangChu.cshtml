@@ -1,0 +1,242 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+
+<style type="text/css">
+    .banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../../content/img/ảnh chụp màn hình 2024-09-22 163042 - sao chép.png');
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+    }
+
+    .banner-content {
+        text-align: center;
+        color: #000000;
+    }
+
+        .banner-content h1 {
+            font-size: 40px;
+            margin-bottom: 20px
+        }
+
+        .banner-content p {
+            font-size: 20px;
+            margin-bottom: 20px
+        }
+
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        background-color: blueviolet;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    #content {
+        background-color: white;
+    }
+
+    .main-menu {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
+
+        .main-menu ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+        }
+
+    .featured-products {
+        text-align: center;
+        background-color: white;
+    }
+
+        .featured-products h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+    .products-container {
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .products-items {
+        width: 200px;
+        background-color: white;
+    }
+
+        .products-items img {
+            width: 100%;
+            height: auto;
+        }
+
+        .products-items h3 {
+            font-size: 18px;
+            margin: 10px 0
+        }
+
+        .products-items .price {
+            font-weight: bold;
+        }
+
+    .products-list {
+        text-align: center;
+        background-color: white;
+    }
+
+        .products-list h2 {
+            font-size: 24px;
+            margin-bottom: 20px
+        }
+
+    .list-container {
+        list-style-type: none;
+        display: flex;
+        justify-content:center;
+        gap: 20px;
+    }
+
+    .products-items {
+        border: 1px solid #000000;
+        padding: 10px;
+        text-align: left;
+    }
+
+        .products-items img {
+            width: 100%;
+            height: auto;
+        }
+
+        .products-items h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .products-items .price {
+            font-weight: bold;
+        }
+
+    .search-section {
+        text-align: center;
+        background-color: white;
+    }
+
+        .search-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #search-input {
+        width: 300px;
+        padding: 10px;
+        border: 1px solid #000000;
+        border-radius: 5px 0 0 5px;
+    }
+
+    #search-button {
+        background-color: lightslategray;
+        padding: 10px 20px;
+        border: none;
+        color: black;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+
+        #search-button:hover {
+            background-color: #808080;
+        }
+</style>
+
+
+<section class="banner">
+    <div class="banner-content">
+        <h1>Chào mừng đến với trang web E-commerce</h1>
+        <p>Mua sắm trực tuyến với hàng ngàn sản phẩm đa dạng và chất lượng</p>
+        <a href="#" class="btn">Bắt đầu mua sắm</a>
+    </div>
+</section>
+
+<section id="content">
+    <nav class="main-menu">
+        <ul>
+            <li><a href="#">Điện thoại di động</a></li>
+            <li><a href="#">Máy tính bảng</a></li>
+            <li><a href="#">Laptop</a></li>
+            <li><a href="#">Phụ kiện</a></li>
+        </ul>
+    </nav>
+
+    <section class="search-section">
+        <h2>Tìm kiếm sản phẩm</h2>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Nhập từ khóa..." />
+            <button id="search-button">Tìm kiếm</button>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="products-container">
+            <div class="products-items">
+                <img src="~/Content/img/product.png" alt="Sản phẩm 1" /> <h3>Sản phẩm 1</h3>
+                <p class="price">$99.99</p>
+            </div>
+
+            <div class="products-items">
+                <img src="~/Content/img/products.png" alt="Sản phẩm 2" /> <h3>Sản phẩm 2</h3>
+                <p class="price">$99.99</p>
+            </div>
+
+            <div class="products-items">
+                <img src="~/Content/img/box.png" alt="Sản phẩm 3" /> <h3>Sản phẩm 3</h3>
+                <p class="price">$99.99</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-list">
+        <h2>Danh sách sản phẩm</h2>
+        <ul class="list-container">
+            <li class="products-items">
+                <img src="~/Content/img/product.png" alt="Sản phẩm 1" /> <h3>Sản phẩm 1</h3>
+                <p class="price">$99.99</p>
+                <p>Mô tả sản phẩm 1</p>
+            </li>
+        </ul>
+
+        <ul class="list-container">
+            <li class="products-items">
+                <img src="~/Content/img/products.png" alt="Sản phẩm 2" /> <h3>Sản phẩm 2</h3>
+                <p class="price">$99.99</p>
+                <p>Mô tả sản phẩm 2</p>
+            </li>
+        </ul>
+
+        <ul class="list-container">
+            <li class="products-items">
+                <img src="~/Content/img/box.png" alt="Sản phẩm 3" /> <h3>Sản phẩm 3</h3>
+                <p class="price">$99.99</p>
+                <p>Mô tả sản phẩm 3</p>
+            </li>
+        </ul>
+    </section>
+</section>   
+
